@@ -10,6 +10,10 @@ class Adventurer{
 
     receiveDamage(amount){
         this.health = this.health - amount;
+        if (this.health <= 0){
+            this.health === 0;
+            console.log("The Adventurer Collapses!!!")
+        }
         console.log(`!!DAMAGE DONE!! ** ${this.name} took ${amount} damage. Health is now ${this.health}`)
     }
 
