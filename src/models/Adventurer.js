@@ -10,7 +10,7 @@ class Adventurer{
 
     receiveDamage(amount){
         this.health = this.health - amount;
-        console.log(`${this.name} took ${amount} damage. Health is now ${this.health}`)
+        console.log(`!!DAMAGE DONE!! ** ${this.name} took ${amount} damage. Health is now ${this.health}`)
     }
 
     heal(amount){
@@ -18,5 +18,6 @@ class Adventurer{
         console.log(`Health increased by ${amount}! Health is now ${this.health}`)
     }
 }
+ 
 
 export {Adventurer};
