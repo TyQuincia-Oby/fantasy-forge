@@ -25,11 +25,14 @@ class Adventurer{
         }
 
         target.health -= amount;
+    
+
 
         console.log(
             `!!ATTACK USED!! ** ${target.name} attacked by ${this.name}. ` +
             `Health is now ${target.health}`
         );
+    
     }
 
     heal(amount){
