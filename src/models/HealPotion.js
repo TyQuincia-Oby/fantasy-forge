@@ -20,6 +20,11 @@ class HealPotion {
             `${this.name} charges left: ${this.charges}`
         );
     }
+
+    recharge(amount){
+        this.charges += amount;
+        console.log("!!Potion recharged!!")
+    }
 }
 
 export { HealPotion };
