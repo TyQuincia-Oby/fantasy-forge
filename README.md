@@ -5,9 +5,10 @@ Classes create the templates of the building blocks , new objects create the bui
 
 ## Getting Started
 
-Run ```
+Run: 
+ ```bash
     node src/main-game.js
-    ```
+```
 
 ## Creating New Items
 The Adventurer takes a name and health parameter for the user to set while the Magical Item takes a name, heal amount and charges within their own classes. 
@@ -15,15 +16,19 @@ The Adventurer takes a name and health parameter for the user to set while the M
 ### new Adventurer
 Create a new adventurer with a method similar as follows:
 
-> const hero1 = new Adventurer("Salazar", 70)
+```javascript
+const hero1 = new Adventurer("Salazar", 70)
+```
     
-    Salazar will start off with a health of 70
+Salazar will start off with a health of 70
 
 
 ### new Magic Item
 Create a new magic item with a method similar as follows: 
 
-> const elixir1 = new HealPotion("Phoenix Tears Elixir", 15, 3)
+```javascript
+ const elixir1 = new HealPotion("Phoenix Tears Elixir", 15, 3)
+ ```
 
     Phoenix Tears Elixir will have a heal amount of 15 and 3 charges.
 
@@ -67,6 +72,7 @@ Example Response:
 > !!ATTACK USED!! ** Sir Brave attacked by Orc Warrior. Health is now 90
 
 ### heal(amount);
+Used when Adventurer heals themselves -> Takes in amount parameters; documents heal amount and new health. 
 
 Example Usage: 
 
@@ -76,10 +82,7 @@ Example Response:
 
 > Health increased by 25! Health is now 95
 
-
-
-
-
-
-
 ## HealPotion Methods()
+
+### use(target);
+Used when magical item is used on a target 
