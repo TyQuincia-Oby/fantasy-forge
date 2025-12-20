@@ -4,7 +4,9 @@
   "description": "An Object-Oriented Programming project in JavaScript that crafts the building blocks of a fantasy world including: heroes, magic items along with their interactions between them.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/main-game.ts",
+    "dev": "tsx watch src/main-game.ts"
   },
   "repository": {
     "type": "git",
