@@ -1,5 +1,5 @@
-import {HealPotion} from '../models/HealPotion.js'
-import { Adventurer } from '../models/Adventurer.js'
+import {HealPotion} from '../models/HealPotion.ts'
+import { Adventurer } from '../models/Adventurer.ts'
 
 const hero1 = new Adventurer ("Brahden", 80)
 const potion1 = new HealPotion("BrambleBrightBrew", 20, 60);

@@ -1,5 +1,5 @@
 //Adventurer playground
-import { Adventurer } from "../models/Adventurer.js";
+import { Adventurer } from "../models/Adventurer.ts";
 
 const hero1 = new Adventurer("Robin", 80);
 const hero2 = new Adventurer("Zemmy", 90);
