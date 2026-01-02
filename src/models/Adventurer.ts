@@ -6,30 +6,28 @@ class Adventurer{
         this.health = health;
     }
 
-    scout(){
+    scout(): void {
         console.log(`${this.name} is scouting. Current health: ${this.health}`)
     }
 
-    receiveDamage(amount: number){
-        this.health = this.health - amount;
+    receiveDamage(amount: number): void{
+        this.health -= amount;
         if (this.health <= 0){
-            this.health === 0;
+            this.health = 0;
             console.log("The Adventurer Collapses!!!")
         }
         console.log(`!!DAMAGE DONE!! ** ${this.name} took ${amount} damage. Health is now ${this.health}`)
     }
 
-    attack(target: string, amount: number){
+    attack(target: Adventurer, amount: number): void{
 
-        if (target.health < 0){
+        if (target.health <= 0){
             console.log("No more health");
             return;
         }
 
-        target.health -= amount;
+        target.receiveDamage(amount);
     
-
-
         console.log(
             `!!ATTACK USED!! ** ${target.name} attacked by ${this.name}. ` +
             `Health is now ${target.health}`
@@ -37,8 +35,8 @@ class Adventurer{
     
     }
 
-    heal(amount: number){
-        this.health = this.health + amount;
+    heal(amount: number): void{
+        this.health += amount;
         console.log(`Health increased by ${amount}! Health is now ${this.health}`)
     }
 }
