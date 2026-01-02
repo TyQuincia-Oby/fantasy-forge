@@ -1,3 +1,4 @@
+import { Adventurer } from "./Adventurer";
 class HealPotion {
     name: string;
     healAmount: number;
@@ -8,13 +9,13 @@ class HealPotion {
         this.charges = charges;
     }
 
-    use(target: string){
-        if (this.charges < 0){
+    use(target: Adventurer): void{
+        if (this.charges <= 0){
             console.log("No more charges");
             return;
         }
 
-        target.health += this.healAmount;
+        target.heal(this.healAmount);
         this.charges--;
 
         console.log(
@@ -24,7 +25,9 @@ class HealPotion {
         );
     }
 
-    recharge(amount: number){
+    recharge(amount: number): void{
+        if (amount <= 0) return;
+        
         this.charges += amount;
         console.log("!!Potion recharged!!")
     }
